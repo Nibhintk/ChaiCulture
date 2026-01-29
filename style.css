@@ -3,6 +3,19 @@
   --brown: #4b2e1e;
   --cream: #f8f2e8;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-wrapper {
+    min-height: 100vh;     /* fallback */
+    min-height: 100svh;    /* mobile-safe viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 body {
   background:
     radial-gradient(circle at top, #fff6e8, #f3e8d8),
