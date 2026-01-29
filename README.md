@@ -15,7 +15,7 @@ A premium “Coming Soon” landing page for a luxury Indian chai brand inspired
 - Font Awesome
 
 ## Live Demo
-
+https://chaiculture-coomingsoon.netlify.app/
 
 ## Design Note
 The design uses warm cream tones with gold and brown accents to reflect Indian heritage and a premium, timeless feel. Typography and spacing are kept minimal to maintain elegance and focus on the brand.
