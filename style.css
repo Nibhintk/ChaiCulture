@@ -1,0 +1,221 @@
+:root {
+  --gold: #c89b3c;
+  --brown: #4b2e1e;
+  --cream: #f8f2e8;
+}
+body {
+  background:
+    radial-gradient(circle at top, #fff6e8, #f3e8d8),
+    linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(0,0,0,0.02));
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("steam.png") center/contain no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+}
+.header {
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+header img {
+    height: 8rem;
+    object-fit: contain;
+}
+@media (max-width: 600px) {
+    .header {
+        height: 6rem;
+        margin-top: 2rem;
+    }
+
+    header img {
+        height: 5rem;
+    }
+}
+.tagline{
+    
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #4b2e1e; /* deep royal brown */
+    text-align: center;
+    letter-spacing: 0.04rem;
+    margin-bottom: 1rem;
+
+
+}
+.highlight {
+    color: var(--gold);
+}
+@media (max-width: 600px) {
+    .tagline {
+        font-size: 2.5rem;
+        margin: 1rem;
+    }
+}
+.description {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.04rem;
+    font-size: 1.25rem;
+    color: #6f4e37; /* medium brown */
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    opacity: 0.85;
+}
+@media (max-width: 600px) {
+    .description {
+        font-size: 1rem;
+        margin: 0 1rem 1.5rem 1rem;
+    }
+}
+.launching-soon {
+    margin-left: auto;
+    margin-right: auto;
+    height: 4rem;
+    width: 20rem;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:  #4b2e1e; /* warm brown */
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05rem;
+    border: 1px solid var(--gold);
+    border-radius: 1rem;
+    background-color: #f1e2ca;
+    line-height: 4rem;
+    letter-spacing: 0.08em;
+}
+.launching-soon {
+    position: relative;
+    overflow: hidden;
+    animation: borderPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(200, 155, 60, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 6px rgba(200, 155, 60, 0.15);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(200, 155, 60, 0.4);
+    }
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.input{
+    border-radius: 1rem;
+    border:none;
+    padding: 0.5rem;
+    width: 20rem;
+    height: 2.5rem;
+}
+.mybtn{
+    background-color:#c89b3c; 
+    color: #4b2e1e;
+    border-radius: 1rem;
+    border:none;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+.mybtn:hover{
+    background-color: #e8c26f;
+    cursor: pointer;
+}
+.mybtn:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .input,
+    .mybtn {
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    .mybtn {
+        height: 2.5rem;
+        
+    }
+    
+}
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(200, 155, 60, 0.4);
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 5rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* icons row */
+.icon-div {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* each icon as a circle */
+.icon-div a {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255,255,255,0.85);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer i {
+    font-size: 1.4rem;
+    color: #4b2e1e;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer i:hover {
+    color: #c89b3c;
+    transform: translateY(-2px);
+}
+
+footer span {
+    font-family: 'Roboto', sans-serif;
+    font-size: .8rem;
+    color: #6f4e37;
+    text-align: center;
+    opacity: 0.7;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
